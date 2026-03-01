@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 interface AdminLayoutProps {
     children: ReactNode;
     userId?: string;
-    activeTab?: 'bookings' | 'events' | 'vendors';
+    activeTab?: 'bookings' | 'events' | 'vendors' | 'users';
 }
 
 export function AdminLayout({ children, userId, activeTab = 'bookings' }: AdminLayoutProps) {

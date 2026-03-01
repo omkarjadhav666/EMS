@@ -16,7 +16,7 @@ const showcaseFeatures = [
     {
         title: "Premium Vendor Discovery",
         subtitle: "Curated excellence",
-        description: "Discover, hire, and manage top-tier vendors all in one centralized premium dashboard. From florists to photographers, find the perfect match for your aesthetic.",
+        description: "Discover, hire, and manage top-tier vendors all in one centralized premium dashboard. From grand banquet halls to elite decorators and live entertainment, find the perfect professionals for weddings, corporate events, and beyond.",
         icon: Users,
         image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop",
         reversed: true

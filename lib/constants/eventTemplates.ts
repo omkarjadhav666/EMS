@@ -226,5 +226,31 @@ export const EVENT_TEMPLATES: { [key: string]: EventTemplate } = {
             marketing: 0.15,
             other: 0.05
         }
+    },
+    exhibition: {
+        label: "Exhibition / Trade Show",
+        subtypes: [
+            { id: "b2b", label: "B2B Trade Show", description: "Industry-specific, networking, stalls" },
+            { id: "consumer", label: "Consumer Expo", description: "High-footfall, retail, lifestyle" },
+            { id: "art", label: "Art Exhibition", description: "Gallery setup, lighting, quiet ambiance" }
+        ],
+        defaultTasks: [
+            { title: "Book Convention Center or Ground", offset: -180 },
+            { title: "Design Floor Plan & Stall Layout Setup", offset: -150 },
+            { title: "Launch Marketing & Sponsorship Drives", offset: -120 },
+            { title: "Open Stall Bookings for Exhibitors", offset: -90 },
+            { title: "Book Fabrication & Shell Scheme Vendors", offset: -60 },
+            { title: "Arrange Registration & Ticketing Desks", offset: -45 },
+            { title: "Book Security & Housekeeping Services", offset: -30 },
+            { title: "Setup Signages & Branding", offset: -7 },
+            { title: "Exhibitor Move-in & Setup", offset: -2 }
+        ],
+        budgetDistribution: {
+            venue: 0.40,
+            fabrication: 0.25,
+            marketing: 0.20,
+            logistics: 0.10,
+            other: 0.05
+        }
     }
 };

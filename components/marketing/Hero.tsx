@@ -89,7 +89,7 @@ export function Hero() {
                                     </div>
                                 ))}
                             </div>
-                            <span>Loved by 10,000+ Couples</span>
+                            <span>Loved by 10,000+ Clients & Couples</span>
                         </motion.div>
                     </div>
 

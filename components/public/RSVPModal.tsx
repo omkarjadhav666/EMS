@@ -14,7 +14,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
 
 export function RSVPModal({ eventId }: { eventId: string }) {

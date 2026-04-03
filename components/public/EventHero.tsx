@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { PublicEvent } from "@/types/public-event";
 import { format } from "date-fns";
 import { ArrowDown } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 interface EventHeroProps {
     event: PublicEvent;
@@ -12,6 +12,7 @@ interface EventHeroProps {
 
 export function EventHero({ event }: EventHeroProps) {
     const containerRef = useRef<HTMLDivElement>(null);
+    const [imageError, setImageError] = useState(false);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
@@ -53,11 +54,12 @@ export function EventHero({ event }: EventHeroProps) {
                 style={{ y, scale, opacity }}
                 className="absolute inset-0 z-0"
             >
-                {event.cover_image ? (
+                {event.cover_image && !imageError ? (
                     <img
                         src={event.cover_image}
                         alt={event.title}
                         className="w-full h-full object-cover"
+                        onError={() => setImageError(true)}
                     />
                 ) : (
                     <div className="w-full h-full bg-[var(--theme-bg-secondary)]" />

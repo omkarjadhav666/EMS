@@ -26,7 +26,7 @@ const showcaseFeatures = [
         subtitle: "Guest management simplified",
         description: "Send beautiful invitations and track RSVPs in real-time. Manage dietary restrictions, plus-ones, and seating charts with absolute grace.",
         icon: Calendar,
-        image: "https://images.unsplash.com/photo-1505365063097-f131a19615a1?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
         reversed: false
     }
 ];

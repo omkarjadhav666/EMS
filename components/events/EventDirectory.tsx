@@ -8,6 +8,7 @@ import { EVENT_TEMPLATES } from "@/lib/constants/eventTemplates";
 
 export function EventDirectory({ initialEvents }: { initialEvents: any[] }) {
     const [selectedCategory, setSelectedCategory] = useState<string>("All");
+    const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
     // Convert EVENT_TEMPLATES object into an array for rendering buttons
     const eventCategories = Object.entries(EVENT_TEMPLATES).map(([key, template]) => ({
@@ -70,12 +71,13 @@ export function EventDirectory({ initialEvents }: { initialEvents: any[] }) {
                                 data-theme={event.theme || "modern"}
                             >
                                 <div className="h-48 relative overflow-hidden bg-gradient-to-tr from-charcoal to-stone-500">
-                                    {event.cover_image ? (
+                                    {event.cover_image && !imageErrors[event.id] ? (
                                         <>
                                             <img
                                                 src={event.cover_image}
                                                 alt={title}
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-overlay"
+                                                onError={() => setImageErrors(prev => ({ ...prev, [event.id]: true }))}
                                             />
                                             <div className="absolute inset-0 bg-charcoal/30 group-hover:bg-charcoal/10 transition-colors"></div>
                                         </>

@@ -1,0 +1,7 @@
+﻿app/(dashboard)/dashboard/admin/users/page.tsx(8,26): error TS2322: Type '"users"' is not assignable to type '"events" | "vendors" | "bookings" | undefined'.
+components/budget/BudgetChart.tsx(36,25): error TS2322: Type '(value: number) => string' is not assignable to type 'Formatter<number, NameType> & ((value: number, name: NameType, item: Payload<number, NameType>, index: number, payload: Payload<number, NameType>[]) => ReactNode | [...])'.
+  Type '(value: number) => string' is not assignable to type 'Formatter<number, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'number | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+components/public/RSVPModal.tsx(17,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.

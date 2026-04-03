@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { MapPin, Star, Building2, UtensilsCrossed, Camera, Music, Palette, Car, Sparkles, ClipboardList, Shirt, Gift, Plane, Videotape, LayoutGrid } from "lucide-react";
 import { VENDOR_CATEGORIES } from "@/lib/constants/vendorCategories";
+import { getVendorImage, getVendorLocation } from "@/lib/utils/vendorImage";
 
 export function VendorDirectory({ initialVendors }: { initialVendors: any[] }) {
     const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -68,9 +69,9 @@ export function VendorDirectory({ initialVendors }: { initialVendors: any[] }) {
                             className="group bg-[var(--theme-bg-primary)] rounded-2xl overflow-hidden border border-[var(--theme-border-color)] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             <div className="h-48 relative overflow-hidden bg-stone-100">
-                                {vendor.image_url ? (
+                                {getVendorImage(vendor) ? (
                                     <img
-                                        src={vendor.image_url}
+                                        src={getVendorImage(vendor) as string}
                                         alt={vendor.name}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
@@ -98,7 +99,7 @@ export function VendorDirectory({ initialVendors }: { initialVendors: any[] }) {
 
                                 <div className="flex items-center gap-2 text-[var(--theme-text-muted)] text-sm mb-4">
                                     <MapPin className="w-4 h-4 text-emerald-600 opacity-70" />
-                                    <span>{vendor.location || "Location Flexible"}</span>
+                                    <span>{getVendorLocation(vendor)}</span>
                                 </div>
 
                                 <div className="flex justify-between items-center border-t border-[var(--theme-border-color)] pt-4 mt-4">

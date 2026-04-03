@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { format } from "date-fns";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { getVendorImage } from "@/lib/utils/vendorImage";
 
 export function MyServices() {
     const supabase = createClient();
@@ -69,9 +70,9 @@ export function MyServices() {
                 <div key={booking.id} className="group relative bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 hover:border-gold-leaf-200 transition-all duration-500 flex flex-col h-full">
                     {/* Top image header for the "ticket" */}
                     <div className="relative h-28 w-full bg-stone-100">
-                        {booking.vendors?.image_url && (
+                        {getVendorImage(booking.vendors) && (
                             <Image
-                                src={booking.vendors.image_url}
+                                src={getVendorImage(booking.vendors) as string}
                                 alt={booking.vendors.name}
                                 fill
                                 className="object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"

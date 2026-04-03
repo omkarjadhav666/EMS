@@ -48,9 +48,9 @@ using (auth.uid() = user_id);
 -- 3. Seed Data (Mock Vendors)
 insert into vendors (name, category, description, price_range, location, rating, tags, image_url)
 values
-('Oberoi Udaivilas', 'Venue', 'A royal palace hotel on the banks of Lake Pichola.', '₹₹₹₹', 'Udaipur, Rajasthan', 4.9, ARRAY['Royal', 'Palace', 'Luxury'], 'https://images.unsplash.com/photo-1585250442385-2e6f3325c7e3?auto=format&fit=crop&q=80&w=800'),
-('Goa Beach Shacks', 'Venue', 'Breezy beachside venue for a relaxed wedding.', '₹₹', 'Goa', 4.5, ARRAY['Beach', 'Outdoor', 'Casual'], 'https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=800'),
-('Spice Route Catering', 'Catering', 'Authentic Indian regional cuisines and fusion live counters.', '₹₹₹', 'Mumbai, MH', 4.8, ARRAY['Buffet', 'Live Counters', 'Fusion'], 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80&w=800'),
-('Candid Tales', 'Photography', 'Preserving your wedding memories with cinematic storytelling.', '₹₹', 'Delhi, NCR', 4.7, ARRAY['Candid', 'Cinematic', 'Drone'], 'https://images.unsplash.com/photo-1520854221256-17451cc330e7?auto=format&fit=crop&q=80&w=800'),
-('DJ NYK', 'Music', 'Bollywood and EDM mixes to keep the party going.', '₹', 'Mumbai, MH', 4.6, ARRAY['DJ', 'Bollywood', 'EDM'], 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800'),
-('Ferns & Petals Decor', 'Decor', 'Traditional marigold themes to modern pastel florals.', '₹₹₹', 'Bangalore, KA', 4.8, ARRAY['Floral', 'Traditional', 'Modern'], 'https://images.unsplash.com/photo-1490750967868-58cb75069ed6?auto=format&fit=crop&q=80&w=800');
+('Oberoi Udaivilas', 'Venue', 'A royal palace hotel on the banks of Lake Pichola.', '₹₹₹₹', 'Udaipur, Rajasthan', 4.9, ARRAY['Royal', 'Palace', 'Luxury'], 'https://picsum.photos/seed/venue1/800/600'),
+('Goa Beach Shacks', 'Venue', 'Breezy beachside venue for a relaxed wedding.', '₹₹', 'Goa', 4.5, ARRAY['Beach', 'Outdoor', 'Casual'], 'https://picsum.photos/seed/venue2/800/600'),
+('Spice Route Catering', 'Catering', 'Authentic Indian regional cuisines and fusion live counters.', '₹₹₹', 'Mumbai, MH', 4.8, ARRAY['Buffet', 'Live Counters', 'Fusion'], 'https://picsum.photos/seed/catering1/800/600'),
+('Candid Tales', 'Photography', 'Preserving your wedding memories with cinematic storytelling.', '₹₹', 'Delhi, NCR', 4.7, ARRAY['Candid', 'Cinematic', 'Drone'], 'https://picsum.photos/seed/photo1/800/600'),
+('DJ NYK', 'Music', 'Bollywood and EDM mixes to keep the party going.', '₹', 'Mumbai, MH', 4.6, ARRAY['DJ', 'Bollywood', 'EDM'], 'https://picsum.photos/seed/music1/800/600'),
+('Ferns & Petals Decor', 'Decor', 'Traditional marigold themes to modern pastel florals.', '₹₹₹', 'Bangalore, KA', 4.8, ARRAY['Floral', 'Traditional', 'Modern'], 'https://picsum.photos/seed/decor1/800/600');

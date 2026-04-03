@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MapPin, Presentation, Quote, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { VendorBookingButton } from "@/components/vendors/VendorBookingButton";
+import { getVendorImage, getVendorLocation } from "@/lib/utils/vendorImage";
 
 export default async function VendorPublicProfile({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
@@ -24,9 +25,9 @@ export default async function VendorPublicProfile({ params }: { params: Promise<
         <div className="bg-alabaster min-h-screen pb-20">
             {/* Immersive Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
-                {vendor.image_url ? (
+                {getVendorImage(vendor) ? (
                     <Image
-                        src={vendor.image_url}
+                        src={getVendorImage(vendor) as string}
                         alt={`${vendor.name} showcase`}
                         fill
                         className="object-cover"
@@ -62,7 +63,7 @@ export default async function VendorPublicProfile({ params }: { params: Promise<
                         <div className="flex items-center gap-6 text-stone-200 text-lg">
                             <span className="flex items-center gap-2 font-medium">
                                 <MapPin className="w-5 h-5 text-gold-leaf-400" />
-                                {vendor.location}
+                                {getVendorLocation(vendor)}
                             </span>
                         </div>
                     </div>

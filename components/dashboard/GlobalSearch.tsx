@@ -12,6 +12,7 @@ import {
     CommandItem,
     CommandList,
 } from "@/components/ui/command";
+import { getVendorImage } from "@/lib/utils/vendorImage";
 
 interface GlobalSearchProps {
     user: any;
@@ -149,8 +150,8 @@ export function GlobalSearch({ user }: GlobalSearchProps) {
                                     }}
                                     className="flex items-center gap-3 p-2 cursor-pointer"
                                 >
-                                    {vendor.image_url ? (
-                                        <img src={vendor.image_url} alt={vendor.name} className="w-8 h-8 rounded-md object-cover" />
+                                    {getVendorImage(vendor) ? (
+                                        <img src={getVendorImage(vendor) as string} alt={vendor.name} className="w-8 h-8 rounded-md object-cover" />
                                     ) : (
                                         <div className="w-8 h-8 rounded-md bg-stone-100 flex items-center justify-center shrink-0">
                                             <Search className="w-4 h-4 text-stone-400" />

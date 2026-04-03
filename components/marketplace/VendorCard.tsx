@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { getVendorImage, getVendorLocation } from "@/lib/utils/vendorImage";
 
 export interface Vendor {
     id: string;
@@ -37,7 +38,7 @@ export function VendorCard({ vendor, onBook }: VendorCardProps) {
                     className="w-full h-full relative"
                 >
                     <Image
-                        src={vendor.image_url}
+                        src={getVendorImage(vendor) || "/images/vendors/oberoi.png"}
                         alt={vendor.name}
                         fill
                         className="object-cover"
@@ -63,7 +64,7 @@ export function VendorCard({ vendor, onBook }: VendorCardProps) {
                         <h3 className="font-serif text-2xl text-charcoal group-hover:text-gold-leaf-600 transition-colors">{vendor.name}</h3>
                         <div className="flex items-center text-taupe text-sm mt-1.5 font-medium">
                             <MapPin className="w-3.5 h-3.5 mr-1.5 text-stone-400" />
-                            {vendor.location}
+                            {getVendorLocation(vendor)}
                         </div>
                     </div>
                 </div>
